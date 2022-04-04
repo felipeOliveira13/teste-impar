@@ -1,7 +1,6 @@
  import ImgLupa from '../../assets/lupa.svg'
  import ImgFundo from '../../assets/fundo-busca.png'
 import { Pesquisa } from './styles'
-import react from 'react'
 
 interface IProcurarProps {
     onChange: (value: string) => void;
