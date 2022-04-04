@@ -51,5 +51,5 @@ export const Pesquisa = styled.div`
 
     }
 
-    
+}
 `;

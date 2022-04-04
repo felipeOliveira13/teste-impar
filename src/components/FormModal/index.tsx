@@ -12,9 +12,11 @@ import {useState} from 'react';
 import ErroModal from "../indisponivel";
 import DisableModal from "../disable" 
 
+interface IFormModalProps  {
+    closeModal: (value: boolean) => void;
+    };
 
-
-export default function FormModal({closeModal}){
+export default function FormModal({closeModal}:IFormModalProps){
     const [erro, setErro] = useState(false)
 
     return(

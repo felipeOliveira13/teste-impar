@@ -2,7 +2,6 @@ import react from 'react';
 import {
     Overlay, 
     Container,
-    Header,
     Footer,
     Corpo,
     Close,
@@ -10,9 +9,11 @@ import {
 import img from '../../assets/icone_criar.svg';
 import {useState} from 'react';
 
+interface IErroModal  {
+    closeModal: (value: boolean) => void;
+    };
 
-
-export default function ErroModal({closeModal}){
+export default function ErroModal({closeModal}:IErroModal){
 
     return(
         <Overlay>

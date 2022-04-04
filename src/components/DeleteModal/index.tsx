@@ -10,9 +10,11 @@ import {useState} from 'react';
 import lixo from "../../assets/lixeira.svg";
 import ErroModal from "../indisponivel";
 
+interface IDeleteModalProps {
+    closeModal: (value: boolean) => void;
+    };
 
-
-export default function DeleteModal({closeModal}){
+export default function DeleteModal({closeModal}:IDeleteModalProps){
     const [openDeleteModal, setOpenDeleteModal] = useState(false)
     const [erro, setErro] = useState(false)
 

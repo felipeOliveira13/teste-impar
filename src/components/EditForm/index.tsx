@@ -12,8 +12,11 @@ import {useState} from 'react';
 import ErroModal from "../indisponivel";
 import DisableModal from "../disable"
 
+interface IEditFormProps  {
+    closeModal: (value: boolean) => void;
+    };
 
-export default function EditForm ({closeModal}){
+export default function EditForm ({closeModal}:IEditFormProps){
     const [erro, setErro] = useState(false)
 
     return(

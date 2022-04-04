@@ -1,5 +1,5 @@
 import { SetStateAction, useEffect, useState } from "react";
-import { Clique } from "./components/botao";
+import  Clique  from "./components/botao";
 import {Procurar } from "./components/buscar";
 import { Header } from "./components/header";
 import api from "./services/api";
@@ -21,10 +21,15 @@ import {
   Corpo
 } from '../src/components/FormModal/styles';
 
+interface IPokemosProps  {
+  name?:  string 
+  url?: string
+  };
 
-export function App() {
+
+export const App: React.FC<IPokemosProps> = (props) => {
   const[text, setText] = useState('')
-  const[items, setItems] = useState([])
+  const[items, setItems] = useState<any[]>()
 
   useEffect(() =>{  
     api.get('https://pokeapi.co/api/v2/pokemon') 
@@ -36,14 +41,13 @@ export function App() {
       
     }, []); 
     
-    const pesquisa = items.filter((f) => f.name.toLocaleLowerCase().includes(text.toLocaleLowerCase()))
+    const pesquisa = items?.filter((f) => f.name.toLocaleLowerCase().includes(text.toLocaleLowerCase()))
     const [openEditModal, setOpenEditModal] = useState(false)
     const [openDeleteModal, setOpenDeleteModal] = useState(false)
     return (
       <>
      <Header/>
-     <Procurar 
-     value={text} 
+     <Procurar  
      onChange={(search) => setText(search)}/>
      <Clique/>
 
@@ -51,11 +55,11 @@ export function App() {
 
        <div className="nomes-pokemon">
          <div className="ajustes">
-         {pesquisa.map ((pokemon)=> (
+         {pesquisa?.map ((pokemon:IPokemosProps)=> (
            <div className="boa">
               <img className={'soco'} src={soco} alt="" />
-              <p key={pokemon.url}>
-                {pokemon.name}
+              <p key={pokemon?.url}>
+                {pokemon?.name}
               </p>   
 
 

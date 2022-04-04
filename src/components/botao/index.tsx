@@ -2,7 +2,7 @@ import FormModal from "../FormModal";
 import { Novo, Card } from "./styles";
 import {useEffect, useState} from 'react';
 
-export function Clique(){
+ function Clique(){
 
     const [openModal, setOpenModal] = useState(false)
 
@@ -21,3 +21,5 @@ export function Clique(){
         </Novo>
     )
 }
+
+export default Clique;

@@ -3,16 +3,17 @@
 import { Pesquisa } from './styles'
 import react from 'react'
 
- export function Procurar({value, onChange}) {
-     function handleChange(event){
-        onChange(event.target.value)
-     }
-     
-    return(
+interface IProcurarProps {
+    onChange: (value: string) => void;
+    };
+
+
+ export function Procurar({onChange}:IProcurarProps) {
+         return(
         <Pesquisa>
             <div className="DOIS" style= {{ background:  `url(${ImgFundo})`, backgroundSize: 'cover', height: '281px', backgroundRepeat: 'no-repeat' }}>
 
-            <input type="text" value={value} onChange={handleChange}placeholder="Digite aqui sua busca..." /> 
+            <input type="text" onChange={(event)=>onChange(event.target.value)}placeholder="Digite aqui sua busca..." /> 
 
             <button type="submit">
                 
