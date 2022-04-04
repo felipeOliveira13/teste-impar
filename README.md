@@ -4,4 +4,10 @@
 
 # clonar o projeto
   
- dento do CMD, escreva o seguinte codigo ==> git clone 
+ dento do CMD, escreva o seguinte codigo ==> git clone https://github.com/felipeOliveira13/teste-impar.git
+ em sequencia digite o codigo a seguir para abrir o projeto no vscode ==> code . 
+ 
+ # rodar o projeto
+ 
+ ao abrir o vscode, no canto inferior esquerdo, mude a brench para a brench de nome "Master"
+ 
