@@ -10,4 +10,7 @@
  # rodar o projeto
  
  ao abrir o vscode, no canto inferior esquerdo, mude a brench para a brench de nome "Master"
+ em seguida, dentro do vscode, abra o terminal e entre na pasta "teste-impar"
+ ao entrar na pasta instale as dependencias do projeto digitando o codigo a seguir ==> npm i
+ quando finalizar a instalaçâo digite a linha de codigo a seguir para ver o projeto desenvolvido ==> npm start;
  
